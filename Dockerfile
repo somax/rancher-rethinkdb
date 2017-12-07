@@ -1,5 +1,7 @@
 FROM rethinkdb:2.3.6
-MAINTAINER xkodiak
+MAINTAINER xkodiak,somax
+
+COPY assets/sources.list /etc/apt/
 
 RUN apt update && apt install -y curl
 
