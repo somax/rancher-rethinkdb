@@ -2,7 +2,7 @@
 
 url='http://rancher-metadata/2015-12-19'
 uuid=$(curl -s "$url/self/container/uuid/")
-cmd="rethinkdb --bind all"
+cmd="rethinkdb --bind all --no-http-admin --initial-password auto"
 
 while read -r line; do
     id=$(echo $line | grep -oP '[0-9](?=\=)')
